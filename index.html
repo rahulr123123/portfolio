@@ -777,11 +777,15 @@
         return;
       }
 
-      alert("Thank you, " + name + "! Your message has been received. I will reply soon.");
-
-      status.textContent = "Message sent. Thanks for reaching out, " + name + "!";
+      // Display success message in-page (avoid relying on popup timing)
+      status.textContent = "Message sent successfully! Thank you, " + name + ". I will reply soon.";
       status.style.color = "#0a7aff";
       status.style.display = "block";
+      status.style.fontWeight = "700";
+      status.style.marginTop = "10px";
+
+      // Optionally remove the alert if you don't want popups
+      // alert("Thank you, " + name + "! Your message has been received. I will reply soon.");
 
       contactForm.reset();
     });
