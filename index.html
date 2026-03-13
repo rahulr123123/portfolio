@@ -764,6 +764,7 @@
   const contactSubmit = document.getElementById("contactSubmit");
   if (contactForm && contactSubmit) {
     contactSubmit.addEventListener("click", function() {
+      console.log("contact submit clicked");
       const name = document.getElementById("contactName").value.trim();
       const email = document.getElementById("contactEmail").value.trim();
       const subject = document.getElementById("contactSubject").value.trim();
@@ -776,7 +777,10 @@
         status.style.display = "block";
         return;
       }
-
+        // Success state starts here
+        status.textContent = "Message sent successfully!";
+        status.style.color = "#0a7aff";
+        status.style.display = "block";
       // Display success message in-page (avoid relying on popup timing)
       status.textContent = "Message sent successfully! Thank you, " + name + ". I will reply soon.";
       status.style.color = "#0a7aff";
@@ -789,10 +793,20 @@
 
       // Update submit button text and style
       contactSubmit.textContent = "Submitted";
-      contactSubmit.style.background = "linear-gradient(45deg, #22c55e, #16a34a)";
-      contactSubmit.style.color = "#ffffff";
-      contactSubmit.style.cursor = "default";
       contactSubmit.disabled = true;
+      contactSubmit.style.background = "linear-gradient(45deg, #22c55e, #16a34a)";
+      contactSubmit.style.color = "#fff";
+      contactSubmit.style.cursor = "not-allowed";
+
+      setTimeout(() => {
+    contactSubmit.textContent = "Send Message";
+    contactSubmit.disabled = false;
+    contactSubmit.style.background = "";
+    contactSubmit.style.color = "";
+    contactSubmit.style.cursor = "";
+    status.style.display = "none";
+  }, 5000);
+
 
       contactForm.reset();
     });
