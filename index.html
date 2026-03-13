@@ -643,14 +643,19 @@
 
     <div class="contact-card">
       <h3>Send a Message</h3>
-      <form id="contactForm" class="contact-form" action="javascript:void(0);">
-        <input type="text" id="contactName" placeholder="Your name" required />
-        <input type="email" id="contactEmail" placeholder="Your email" required />
-        <input type="text" id="contactSubject" placeholder="Subject" />
-        <textarea id="contactMessage" rows="5" placeholder="Tell me about your project / requirement" required></textarea>
-        <button type="button" id="contactSubmit">Send Message</button>
-        <p id="contactStatus" style="display:none;margin-top:6px;font-weight:600;"></p>
-      </form>
+      <form id="contactForm" class="contact-form">
+  <input type="text" id="contactName" placeholder="Your name" required />
+
+  <input type="email" id="contactEmail" placeholder="Your email" required />
+
+  <input type="text" id="contactSubject" placeholder="Subject" />
+
+  <textarea id="contactMessage" rows="5" placeholder="Tell me about your project / requirement" required></textarea>
+
+  <button type="button" id="contactSubmit">Send Message</button>
+
+  <p id="contactStatus" style="display:none;margin-top:10px;font-weight:600;"></p>
+</form>
     </div>
   </div>
 
@@ -740,76 +745,45 @@
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  
+document.getElementById("year").textContent = new Date().getFullYear();
 
-  document.getElementById("feedbackForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+const contactForm = document.getElementById("contactForm");
+const contactSubmit = document.getElementById("contactSubmit");
+const status = document.getElementById("contactStatus");
 
-    const name = document.getElementById("visitorName").value.trim();
-    const email = document.getElementById("visitorEmail").value.trim();
-    const message = document.getElementById("visitorMessage").value.trim();
+contactSubmit.addEventListener("click", function () {
 
-    if (!name || !email || !message) {
-      alert("Please fill in all fields before submitting feedback.");
-      return;
-    }
+  const name = document.getElementById("contactName").value.trim();
+  const email = document.getElementById("contactEmail").value.trim();
+  const subject = document.getElementById("contactSubject").value.trim();
+  const message = document.getElementById("contactMessage").value.trim();
 
-    alert(`Thank you, ${name}! Your feedback has been received. 🎉`);
-
-    // Reset form fields for next visitor
-    e.target.reset();
-  });
-
-  const contactForm = document.getElementById("contactForm");
-  const contactSubmit = document.getElementById("contactSubmit");
-  if (contactForm && contactSubmit) {
-    contactSubmit.addEventListener("click", function() {
-      console.log("contact submit clicked");
-      const name = document.getElementById("contactName").value.trim();
-      const email = document.getElementById("contactEmail").value.trim();
-      const subject = document.getElementById("contactSubject").value.trim();
-      const message = document.getElementById("contactMessage").value.trim();
-      const status = document.getElementById("contactStatus");
-
-      if (!name || !email || !message) {
-        status.textContent = "Please complete all required fields.";
-        status.style.color = "#e02424";
-        status.style.display = "block";
-        return;
-      }
-        // Success state starts here
-        status.textContent = "Message sent successfully!";
-        status.style.color = "#0a7aff";
-        status.style.display = "block";
-      // Display success message in-page (avoid relying on popup timing)
-      status.textContent = "Message sent successfully! Thank you, " + name + ". I will reply soon.";
-      status.style.color = "#0a7aff";
-      status.style.display = "block";
-      status.style.fontWeight = "700";
-      status.style.marginTop = "10px";
-
-      // Optionally remove the alert if you don't want popups
-      // alert("Thank you, " + name + "! Your message has been received. I will reply soon.");
-
-      // Update submit button text and style
-      contactSubmit.textContent = "Submitted";
-      contactSubmit.disabled = true;
-      contactSubmit.style.background = "linear-gradient(45deg, #22c55e, #16a34a)";
-      contactSubmit.style.color = "#fff";
-      contactSubmit.style.cursor = "not-allowed";
-
-      setTimeout(() => {
-        contactSubmit.textContent = "Send Message";
-        contactSubmit.disabled = false;
-        contactSubmit.style.background = "";
-        contactSubmit.style.color = "#111827";
-        contactSubmit.style.cursor = "pointer";
-        status.style.display = "none";
-      }, 5000);
-
-
-      contactForm.reset();
-    });
-  } else {
-    console.warn("Contact form or submit button not found - cannot attach handler.");
+  if (!name || !email || !message) {
+    status.textContent = "⚠ Please fill all required fields.";
+    status.style.color = "red";
+    status.style.display = "block";
+    return;
   }
+
+  // Success message
+  status.textContent = "✅ Message sent successfully! Thank you " + name + ". I will reply soon.";
+  status.style.color = "green";
+  status.style.display = "block";
+
+  // Change button style
+  contactSubmit.textContent = "Sent ✔";
+  contactSubmit.style.background = "linear-gradient(45deg,#22c55e,#16a34a)";
+  contactSubmit.disabled = true;
+
+  // Reset after 5 seconds
+  setTimeout(() => {
+    contactSubmit.textContent = "Send Message";
+    contactSubmit.style.background = "linear-gradient(45deg,#38bdf8,#0ea5e9)";
+    contactSubmit.disabled = false;
+    status.style.display = "none";
+    contactForm.reset();
+  }, 5000);
+
+});
+</script>
