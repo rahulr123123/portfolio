@@ -787,6 +787,13 @@
       // Optionally remove the alert if you don't want popups
       // alert("Thank you, " + name + "! Your message has been received. I will reply soon.");
 
+      // Update submit button text and style
+      contactSubmit.textContent = "Submitted";
+      contactSubmit.style.background = "linear-gradient(45deg, #22c55e, #16a34a)";
+      contactSubmit.style.color = "#ffffff";
+      contactSubmit.style.cursor = "default";
+      contactSubmit.disabled = true;
+
       contactForm.reset();
     });
   } else {
