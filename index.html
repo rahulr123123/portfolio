@@ -2,11 +2,479 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=./public/pages/home.html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
+  <title>Rahul R | Creative Developer & Problem Solver</title>
+  <meta name="description" content="Welcome to Rahul R's portfolio. Explore innovative projects, creative solutions, and a passion for turning ideas into reality through technology.">
+  <link rel="stylesheet" href="./public/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
 </head>
 <body>
-  <p>Redirecting to portfolio...</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">Rahul R</a>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span>Hello, I'm Rahul R</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="word">I build</span>
+          <span class="word">thoughtful digital</span>
+          <span class="word highlight">experiences</span>
+        </h1>
+        <p class="hero-subtitle">Open to all domains, eager to solve challenges across every field.</p>
+        <p class="hero-description">
+          I enjoy building meaningful products that work well anywhere, whether it’s web, data, or systems. Every project is an opportunity to learn, grow, and deliver value in any domain.
+        </p>
+        
+        <div class="cta-section">
+          <a href="#projects" class="btn btn-primary btn-large">
+            <span>See My Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="./public/RAHUL_RESUME_%20(1).pdf" class="btn btn-outline btn-large" download>
+            <span>Download Resume</span>
+            <i class="fas fa-download"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline btn-large">
+            <span>Talk with Me</span>
+            <i class="fas fa-paper-plane"></i>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <h3>Curiosity</h3>
+            <p>Always learning and improving</p>
+          </div>
+          <div class="stat-box">
+            <h3>Clarity</h3>
+            <p>Simple, clean outcomes</p>
+          </div>
+          <div class="stat-box">
+            <h3>Commitment</h3>
+            <p>Reliable and focused delivery</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-photo">
+          <img src="./public/pages/IMG_4764.jpg.jpeg" alt="Rahul R" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">My Journey, Education & Professional Growth</p>
+
+      <div class="about-wrapper">
+        <!-- Education Timeline -->
+        <div class="education-timeline">
+          <h3 class="timeline-heading"><i class="fas fa-graduation-cap"></i> Education Path</h3>
+          
+          <div class="timeline-item current">
+            <div class="timeline-marker">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Master of Computer Applications (MCA)</h4>
+              <p class="timeline-dates">2025 - 2027</p>
+              <p class="timeline-institute">Kumaraguru College of Technology, Coimbatore</p>
+              <p class="timeline-desc">Advanced studies in software development and emerging technologies</p>
+              <span class="status-badge current">Currently Pursuing</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Bachelor of Science - Computer Science</h4>
+              <p class="timeline-dates">2022 - 2025</p>
+              <p class="timeline-institute">Sri Krishna Adithya College, Coimbatore</p>
+              <p class="timeline-desc">Strong foundation in software engineering and programming fundamentals</p>
+              <span class="score-badge">CGPA: 7.57/10</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Higher Secondary Certificate (HSC)</h4>
+              <p class="timeline-dates">2022</p>
+              <p class="timeline-institute">Sri Sowdeswari Vidyalaya, Coimbatore</p>
+              <p class="timeline-desc">Focused on mathematics and science disciplines</p>
+              <span class="score-badge">70.8%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="experience-section">
+          <h3 class="exp-heading"><i class="fas fa-briefcase"></i> Professional Experience</h3>
+          
+          <div class="exp-card">
+            <div class="exp-header">
+              <h4>MERN Stack Development Internship</h4>
+              <span class="exp-date">Aug 2025 - Oct 2025 (3 Months)</span>
+            </div>
+            <div class="exp-body">
+              <p class="exp-highlight">Comprehensive full-stack development training with hands-on implementation</p>
+              <ul class="exp-highlights">
+                <li><strong>Frontend:</strong> React with modern state management and responsive components</li>
+                <li><strong>Backend:</strong> Node.js & Express.js for robust API development</li>
+                <li><strong>Database:</strong> MongoDB for scalable data management</li>
+                <li><strong>Core Skills:</strong> RESTful APIs, Authentication, CRUD operations, Deployment</li>
+              </ul>
+              <p class="exp-additional">Team collaboration, requirement gathering, and project deployment experience</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="about-actions">
+          <a href="#projects" class="action-btn">
+            <span class="btn-icon"><i class="fas fa-briefcase"></i></span>
+            <span class="btn-text">View Projects</span>
+          </a>
+          <a href="#skills" class="action-btn">
+            <span class="btn-icon"><i class="fas fa-code"></i></span>
+            <span class="btn-text">My Skills</span>
+          </a>
+          <a href="#contact" class="action-btn">
+            <span class="btn-icon"><i class="fas fa-envelope"></i></span>
+            <span class="btn-text">Get In Touch</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">A showcase of my recent work and technical implementations</p>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3 class="project-title">📊 Amazon Sales Dashboard</h3>
+          <p class="project-description">
+            Designed and implemented a comprehensive Amazon-style sales analysis dashboard using Power BI with Excel as the primary data source. Performed data cleaning and transformation in Excel and created interactive visualizations for business insights. Delivered analysis on category contribution, product performance, and regional sales trends.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Power BI</span>
+            <span class="tech-tag">Excel</span>
+            <span class="tech-tag">Data Analysis</span>
+            <span class="tech-tag">Business Intelligence</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/rahulr123123/amazon-like-sales-data-analysis" target="_blank"class="btn btn-secondary">
+              <i class="fas fa-chart-bar"></i> Dashboard
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title">✨ Personal Portfolio Website</h3>
+          <p class="project-description">
+            Designed and developed a responsive personal portfolio website to showcase projects and skills. Implemented using HTML, CSS, and JavaScript with clean, user-friendly interface. Features smooth animations, professional design, and optimized performance hosted on GitHub Pages.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">GitHub Pages</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/rahulr123123/portfolio" target="_blank" class="btn btn-secondary">
+              <i class="fab fa-github"></i> Code
+            </a>
+            <a href="" target="_blank" class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Expertise</h2>
+      <p class="section-subtitle">A comprehensive view of my technical competencies</p>
+
+      <!-- Core Skills Grid -->
+      <div class="skills-grid-section">
+        <h3 class="skills-group-title">
+          <i class="fas fa-star"></i> Core Competencies
+        </h3>
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-badge-box">
+            <div class="badge-header">
+              <h4>Frontend Development</h4>
+            </div>
+            <div class="skills-badges">
+              <span class="skill-badge frontend">HTML5</span>
+              <span class="skill-badge frontend">CSS3</span>
+              <span class="skill-badge frontend">JavaScript</span>
+              <span class="skill-badge frontend">Responsive Design</span>
+            </div>
+          </div>
+
+          <!-- Data & Analytics -->
+          <div class="skill-badge-box">
+            <div class="badge-header">
+              <h4>Data & Analytics</h4>
+            </div>
+            <div class="skills-badges">
+              <span class="skill-badge data">Power BI</span>
+              <span class="skill-badge data">Python</span>
+              <span class="skill-badge data">SQL</span>
+              <span class="skill-badge data">Excel</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-badge-box">
+            <div class="badge-header">
+              <h4>Database Management</h4>
+            </div>
+            <div class="skills-badges">
+              <span class="skill-badge database">MongoDB</span>
+              <span class="skill-badge database">MySQL</span>
+              <span class="skill-badge database">Oracle</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-badge-box">
+            <div class="badge-header">
+              <h4>Development Tools</h4>
+            </div>
+            <div class="skills-badges">
+              <span class="skill-badge tools">VS Code</span>
+              <span class="skill-badge tools">Git/GitHub</span>
+              <span class="skill-badge tools">Figma</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-badge-box">
+            <div class="badge-header">
+              <h4>Professional Skills</h4>
+            </div>
+            <div class="skills-badges">
+              <span class="skill-badge soft">Problem Solving</span>
+              <span class="skill-badge soft">Team Collaboration</span>
+              <span class="skill-badge soft">Quick Learner</span>
+              <span class="skill-badge soft">Adaptability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Tools -->
+      <div class="additional-skills">
+        <h3 class="skills-group-title">
+          <i class="fas fa-tools"></i> Additional Technologies
+        </h3>
+          <div class="tool-item">
+            <i class="fab fa-google"></i>
+            <span>Google Colab</span>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-palette"></i>
+            <span>UI/UX Design</span>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-mobile-alt"></i>
+            <span>Bootstrap</span>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-wind"></i>
+            <span>Tailwind CSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Have a project in mind? Let's discuss how we can work together</p>
+
+      <div class="contact-container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p style="margin-bottom: 2rem; color: var(--text-secondary);">
+            I'm always interested in new opportunities, whether it's a full-time position,
+            freelance project, or collaboration. Feel free to reach out!
+          </p>
+
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong><br>
+              <a href="mailto:rrahul282004@gmail.com">rrahul282004@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Phone</strong><br>
+              <a href="tel:+919042350165">+91 9042350165</a>
+            </div>
+          </div>
+
+          <div class="contact-item" style="margin-top: 1rem;">
+            <i class="fas fa-file-download"></i>
+            <div>
+              <strong>Resume</strong><br>
+              <a href="./public/RAHUL_RESUME_%20(1).pdf" download>Download Resume</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Location</strong><br>
+              Coimbatore, Tamil Nadu, India
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Availability</strong><br>
+              Open to full-time, internships, freelance and remote collaborations
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <h4 style="margin-bottom: 1rem; color: var(--accent-color);">Follow Me</h4>
+            <div class="social-links">
+              <a href="https://github.com/rahulr123123" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/rahul-r-828288250/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:rrahul282004@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3>Send a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+
+            <div id="contactStatus" class="message" style="display: none; margin-top: 1rem; text-align: center;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Me</h3>
+          <p>A curious creator who turns ideas into polished digital experiences. I focus on clarity, consistency, and meaningful results in every project.</p>
+          <div class="social-links">
+            <a href="https://github.com/rahulr123123" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rahul-r-828288250/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:rrahul282004@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-envelope"></i> rrahul282004@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu, India</p>
+          <p><i class="fas fa-clock"></i> Open to opportunities</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Rahul R. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./public/js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
